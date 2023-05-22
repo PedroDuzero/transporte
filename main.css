@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased
+
 }
 
 :root{
@@ -15,7 +16,10 @@ body {
   height: 100%;
   display: grid;
   place-content: center;
-
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  overflow-y: auto;
 }
 
 .flex {
@@ -197,4 +201,23 @@ white-space: nowrap;
 .card-footer .phone, .shield {
   max-width: 68px;
   padding: 10px;
+}
+
+@media screen {
+  
+  body {
+    /* Estilos para o body em qualquer tamanho de tela */
+    max-width: 100%; /* Define a largura máxima do body como 100% */
+    margin: 0 auto; /* Centraliza o body horizontalmente na tela */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical caso o conteúdo não caiba na tela */
+  }
+
+  img {
+    /* Estilos para imagens em qualquer tamanho de tela */
+    max-width: 100%; /* Define a largura máxima da imagem como 100% do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem ajustando automaticamente a altura */
+    display: block; /* Garante que a imagem seja exibida como um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente no contêiner */
+  }
+
 }
